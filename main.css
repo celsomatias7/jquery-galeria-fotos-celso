@@ -1,0 +1,87 @@
+* { /*sempre colocar o "*" para iniciar o CSS, pois desta forma indica que tudo que fizermos funcionará em toda a página*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto, sans-serif;
+}
+
+header {
+    background-color: #5f27cd;
+    padding: 16px 0;
+    color: #fff;
+    display: flex;
+    border-bottom: 16px solid #341f97;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button {
+    margin-left: 16px;
+}
+
+form {
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 16px;
+}
+
+input button {
+    padding: 8px;
+}
+
+button {
+    background-color: #009432;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#botao-cancelar {
+    background-color: red;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap; /* dessa forma sempre que uma linha chega ao fim ele joga o proximo para uma nova linha */
+}
+
+ul li {
+    max-width: 25%; /* por se tratar de 4 itens por linha, se fossem 3 seria 33,33% */
+    list-style: none; /* para remover sujeiras da imagem */
+    position: relative; /*para colocar o link da imagem no rodapé da própria imagem na tela*/
+    max-height: 225px;
+    overflow-y: hidden; /*para ocultar da imagem tudo que exceder o max height que colocamos acima */
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay-imagem-link {
+    padding: 16px;
+    background-color: rgba(0,0,0,0.7);
+    position:absolute; /* para o fundo ficar absoluto ao texto no preenchimento */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /*nivel de transparencia do linl */
+    transition: all ease .5s; /*efeito de transição do link quando passa o mouse */
+}
+
+.overlay-imagem-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*para mostrar a barrinha do link quando passar o mouse */
+ul li:hover .overlay-imagem-link {
+    opacity: 1;
+}
